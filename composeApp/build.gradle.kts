@@ -48,6 +48,9 @@ kotlin {
             implementation(libs.koin.compose)
             implementation(libs.koin.compose.viewmodel)
             implementation(libs.koin.compose.viewmodel.navigation)
+
+            implementation(libs.orbit.core)
+            implementation(libs.orbit.compose)
         }
     }
 }
