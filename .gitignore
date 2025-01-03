@@ -3,5 +3,5 @@ local.properties
 .idea
 .kotlin
 .build/metadata
-.composeApp/build/
+composeApp/build/
 .DS_Store
