@@ -16,6 +16,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import arrow.core.None
+import co.touchlab.kermit.Logger
 import org.jetbrains.compose.resources.painterResource
 import textile.composeapp.generated.resources.Res
 import textile.composeapp.generated.resources.compose_multiplatform
@@ -26,7 +27,9 @@ fun GreetingScreen(viewModel: GreetingViewModel) {
     val snackbarHostState = remember { SnackbarHostState() }
 
     viewModel.container.sideEffectFlow.collectAsState(None).value.fold(
-        ifEmpty = {},
+        ifEmpty = {
+            Logger.withTag("GreetingScreen").d("sideEffectFlow is empty")
+        },
         ifSome = { sideEffect ->
             when (sideEffect) {
                 is GreetingSideEffect.Toast -> {
