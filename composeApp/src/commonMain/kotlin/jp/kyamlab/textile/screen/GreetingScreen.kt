@@ -15,6 +15,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import arrow.core.None
 import org.jetbrains.compose.resources.painterResource
 import textile.composeapp.generated.resources.Res
 import textile.composeapp.generated.resources.compose_multiplatform
@@ -24,15 +25,18 @@ fun GreetingScreen(viewModel: GreetingViewModel) {
     val state = viewModel.container.stateFlow.collectAsState().value
     val snackbarHostState = remember { SnackbarHostState() }
 
-    viewModel.container.sideEffectFlow.collectAsState(null).value?.let { sideEffect ->
-        when (sideEffect) {
-            is GreetingSideEffect.Toast -> {
-                LaunchedEffect(sideEffect.text) {
-                    snackbarHostState.showSnackbar(sideEffect.text)
+    viewModel.container.sideEffectFlow.collectAsState(None).value.fold(
+        ifEmpty = {},
+        ifSome = { sideEffect ->
+            when (sideEffect) {
+                is GreetingSideEffect.Toast -> {
+                    LaunchedEffect(sideEffect.text) {
+                        snackbarHostState.showSnackbar(sideEffect.text)
+                    }
                 }
             }
         }
-    }
+    )
 
     Scaffold(snackbarHost = { SnackbarHost(snackbarHostState) }) {
         Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
