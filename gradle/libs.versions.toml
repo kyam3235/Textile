@@ -17,6 +17,7 @@ kotlin = "2.1.0"
 koin-bom = "4.0.1"
 orbit-multiplatform = "9.0.0"
 arrow-bom = "1.2.4"
+kermit = "2.0.4"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -41,6 +42,7 @@ orbit-compose = { module = "org.orbit-mvi:orbit-compose", version.ref = "orbit-m
 arrow-bom = { module = "io.arrow-kt:arrow-stack", version.ref = "arrow-bom" }
 arrow-core = { module = "io.arrow-kt:arrow-core" }
 arrow-fx-coroutines = { module = "io.arrow-kt:arrow-fx-coroutines" }
+kermit = { module = "co.touchlab:kermit", version.ref = "kermit" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
