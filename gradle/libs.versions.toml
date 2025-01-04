@@ -16,6 +16,7 @@ junit = "4.13.2"
 kotlin = "2.1.0"
 koin-bom = "4.0.1"
 orbit-multiplatform = "9.0.0"
+arrow-bom = "1.2.4"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -37,6 +38,9 @@ koin-compose-viewmodel = { module = "io.insert-koin:koin-compose-viewmodel" }
 koin-compose-viewmodel-navigation = { module = "io.insert-koin:koin-compose-viewmodel-navigation" }
 orbit-core = { module = "org.orbit-mvi:orbit-core", version.ref = "orbit-multiplatform" }
 orbit-compose = { module = "org.orbit-mvi:orbit-compose", version.ref = "orbit-multiplatform" }
+arrow-bom = { module = "io.arrow-kt:arrow-stack", version.ref = "arrow-bom" }
+arrow-core = { module = "io.arrow-kt:arrow-core" }
+arrow-fx-coroutines = { module = "io.arrow-kt:arrow-fx-coroutines" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

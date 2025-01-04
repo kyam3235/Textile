@@ -51,6 +51,10 @@ kotlin {
 
             implementation(libs.orbit.core)
             implementation(libs.orbit.compose)
+
+            implementation(project.dependencies.platform(libs.arrow.bom))
+            implementation(libs.arrow.core)
+            implementation(libs.arrow.fx.coroutines)
         }
     }
 }
