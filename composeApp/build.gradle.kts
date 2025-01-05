@@ -6,6 +6,8 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.ktorfit)
 }
 
 kotlin {
@@ -57,6 +59,8 @@ kotlin {
             implementation(libs.arrow.fx.coroutines)
 
             implementation(libs.kermit)
+
+            implementation(libs.ktorfit.lib)
         }
     }
 }
