@@ -6,3 +6,4 @@ local.properties
 .DS_Store
 build/
 composeApp/build/
+google-services.json
