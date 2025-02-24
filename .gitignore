@@ -6,4 +6,5 @@ local.properties
 .DS_Store
 build/
 composeApp/build/
-google-services.json
+composeApp/google-services.json
+iosApp/GoogleService-Info.plist
