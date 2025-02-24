@@ -18,6 +18,9 @@ koin-bom = "4.0.1"
 orbit-multiplatform = "9.0.0"
 arrow-bom = "1.2.4"
 kermit = "2.0.4"
+google-service = "4.4.2"
+firebase-bom = "33.9.0"
+vertexai = "16.0.0"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -43,6 +46,8 @@ arrow-bom = { module = "io.arrow-kt:arrow-stack", version.ref = "arrow-bom" }
 arrow-core = { module = "io.arrow-kt:arrow-core" }
 arrow-fx-coroutines = { module = "io.arrow-kt:arrow-fx-coroutines" }
 kermit = { module = "co.touchlab:kermit", version.ref = "kermit" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebase-bom" }
+firebase-vertexai = { module = "com.google.firebase:firebase-vertexai", version.ref = "vertexai" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
@@ -50,3 +55,4 @@ androidLibrary = { id = "com.android.library", version.ref = "agp" }
 composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "compose-multiplatform" }
 composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+googleService = { id = "com.google.gms.google-services", version.ref = "google-service" }
